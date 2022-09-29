@@ -18,12 +18,15 @@ console.log(err));
 //ROUTES
 const userRoute = require ('./routes/user')
 const orderRoute = require ('./routes/order')
+const cartRoute = require ('./routes/cart')
+
 
 
 
 app.use(express.json());
 app.use('/user', userRoute);
 app.use('/orders', orderRoute);
+app.use('/cart', cartRoute)
 
 app.listen(PORT, () => {
     console.log(`SERVER IS RUNNING ON PORT ${PORT}`);
